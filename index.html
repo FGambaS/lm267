@@ -8,13 +8,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Lima 2026">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-180.png">
 <title>Lima · Fabián + Fanny</title>
 <style>
 :root{--pine:#133b30;--wine:#7c2230;--gold:#c89a43;--cream:#fbf6e9;--paper:#fffdf8;--ink:#29261f;--muted:#766e62;--line:#e7dcc8;--wa:#e4f2e8}
 *{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink)}
 body{display:grid;grid-template-rows:auto 1fr auto}header{background:linear-gradient(135deg,var(--pine),#0a2a22);color:#fff;padding:calc(12px + env(safe-area-inset-top)) 14px 13px}
-.brand{display:flex;gap:10px;align-items:center;max-width:900px;margin:auto}.appicon{width:52px;height:52px;border-radius:15px;background:#fff8e5}.brand h1{margin:0;font-size:19px;line-height:1.1}.brand p{margin:4px 0 0;font-size:12px;opacity:.84}
+.brand{display:flex;gap:10px;align-items:center;max-width:900px;margin:auto}.appicon{width:52px;height:52px;border-radius:15px;background:#fff8e5;object-fit:cover}.brand h1{margin:0;font-size:19px;line-height:1.1}.brand p{margin:4px 0 0;font-size:12px;opacity:.84}
 #content{overflow:hidden;min-height:0}.screen{height:100%;overflow:auto;-webkit-overflow-scrolling:touch;padding:12px 13px 18px;display:none;max-width:900px;margin:auto}.screen.active{display:block}
 .hero{background:linear-gradient(135deg,#fff9eb,#fffdf8);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(75,50,17,.06);margin-bottom:13px}.eyebrow{color:var(--wine);font-size:11px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}.hero h2{color:var(--pine);font-size:23px;margin:5px 0}.hero p{color:var(--muted);margin:0;font-size:14px}
 .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.hero-actions a,.hero-actions button{border:0;text-decoration:none;text-align:center;border-radius:14px;padding:12px 10px;font-weight:850;font-size:14px;cursor:pointer}.primary{background:var(--pine)!important;color:#fff!important}.secondary{background:#eee3d0;color:var(--pine)}
@@ -28,7 +28,7 @@ nav{background:rgba(255,253,248,.99);border-top:1px solid var(--line);padding-bo
 </style>
 </head>
 <body>
-<header><div class="brand"><img class="appicon" src="icon.svg" alt=""><div><h1>Lima · Navidad y Año Nuevo</h1><p>Fabián + Fanny · 🇨🇴 🇵🇪 · 21 dic 2026 → 2 ene 2027</p></div></div></header>
+<header><div class="brand"><img class="appicon" src="icon-180.png" alt=""><div><h1>Lima · Navidad y Año Nuevo</h1><p>Fabián + Fanny · 🇨🇴 🇵🇪 · 21 dic 2026 → 2 ene 2027</p></div></div></header>
 <div id="content">
 <section class="screen active" id="inicio"><div class="hero"><div class="eyebrow">Nuestro viaje a Lima</div><h2>Todo el viaje, a mano</h2><p>Horarios, lugares, reservas, teléfonos y accesos directos a Maps.</p><div class="hero-actions"><button class="primary" data-go="itinerario">🗓️ Ver itinerario</button><a class="secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jose+Antonio+Executive+Miraflores+Lima">🏨 Volver al hotel</a></div></div><h2 class="section-title">Reservas</h2><div class="reservation"><b>23 dic · 13:00</b><br>Isolina · Barranco</div><div class="reservation"><b>1 ene · 14:00</b><br>La Rosa Náutica · Miraflores</div></section>
 <section class="screen" id="itinerario"><h2 class="section-title" style="margin-top:2px">Itinerario</h2><div id="days"></div></section>
