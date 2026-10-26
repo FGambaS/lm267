@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#133b30">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lima 2026">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon.svg">
+<title>Lima · Fabián + Fanny</title>
+<style>
+:root{--pine:#133b30;--wine:#7c2230;--gold:#c89a43;--cream:#fbf6e9;--paper:#fffdf8;--ink:#29261f;--muted:#766e62;--line:#e7dcc8;--wa:#e4f2e8}
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink)}
+body{display:grid;grid-template-rows:auto 1fr auto}header{background:linear-gradient(135deg,var(--pine),#0a2a22);color:#fff;padding:calc(12px + env(safe-area-inset-top)) 14px 13px}
+.brand{display:flex;gap:10px;align-items:center;max-width:900px;margin:auto}.appicon{width:52px;height:52px;border-radius:15px;background:#fff8e5}.brand h1{margin:0;font-size:19px;line-height:1.1}.brand p{margin:4px 0 0;font-size:12px;opacity:.84}
+#content{overflow:hidden;min-height:0}.screen{height:100%;overflow:auto;-webkit-overflow-scrolling:touch;padding:12px 13px 18px;display:none;max-width:900px;margin:auto}.screen.active{display:block}
+.hero{background:linear-gradient(135deg,#fff9eb,#fffdf8);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(75,50,17,.06);margin-bottom:13px}.eyebrow{color:var(--wine);font-size:11px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}.hero h2{color:var(--pine);font-size:23px;margin:5px 0}.hero p{color:var(--muted);margin:0;font-size:14px}
+.hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.hero-actions a,.hero-actions button{border:0;text-decoration:none;text-align:center;border-radius:14px;padding:12px 10px;font-weight:850;font-size:14px;cursor:pointer}.primary{background:var(--pine)!important;color:#fff!important}.secondary{background:#eee3d0;color:var(--pine)}
+.section-title{font-size:19px;color:var(--pine);margin:20px 2px 9px}.reservation,.card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:13px;margin-bottom:9px}.reservation{border-left:5px solid var(--gold)}.reservation b,.time{color:var(--wine)}
+.day,.simple-day{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:9px;overflow:hidden}summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}.day summary,.simple-day summary{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#fffaf1;padding:13px}.day summary div{display:flex;flex-direction:column}.day summary strong{color:var(--wine);font-size:15px}.day summary span,.simple-day summary span{font-weight:800;color:var(--pine)}
+.events{padding:4px 13px 10px}.event{display:grid;grid-template-columns:86px 27px 1fr;gap:5px;padding:9px 0;border-bottom:1px dashed #ebe1d1;align-items:start}.event:last-child{border:0}.time{font-size:13px;font-weight:850}.event-icon{text-align:center}.event-text{font-size:14px}.pin{text-decoration:none}
+.simple-note{background:var(--pine);color:#fff;border-radius:17px;padding:14px;margin-bottom:11px}.simple-note h3{margin:0 0 3px}.simple-note p{margin:0;font-size:13px;opacity:.85}.simple-day summary{justify-content:flex-start}.simple-day summary b{color:var(--wine);min-width:62px}.simple-list{padding:4px 13px 10px}.simple-row{display:grid;grid-template-columns:96px 1fr;gap:8px;padding:10px 0;border-bottom:1px dashed #ebe1d1}.simple-row:last-child{border:0}.simple-row b{color:var(--wine);font-size:13px}
+.place-grid{display:grid;grid-template-columns:1fr;gap:9px}.place-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:13px}.place-card h3,.card h3{margin:0;color:var(--pine);font-size:16px}.cat{margin:2px 0 8px;color:var(--muted);font-size:12px;font-weight:750}.place-card p,.card p{margin:5px 0;font-size:13px}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.action{text-decoration:none;background:#eee4d3;color:#403a32;border-radius:999px;padding:9px 11px;font-size:12px;font-weight:850}.action.whatsapp{background:var(--wa);color:#1d513b}
+nav{background:rgba(255,253,248,.99);border-top:1px solid var(--line);padding-bottom:max(6px,env(safe-area-inset-bottom));box-shadow:0 -5px 16px rgba(40,30,15,.03)}nav .nav-inner{height:60px;max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr)}.navbtn{border:0;background:transparent;color:#6b645a;font-size:10px;font-weight:850;padding:6px 1px 3px;cursor:pointer}.navbtn .ni{display:block;font-size:19px;margin-bottom:2px}.navbtn.active{color:var(--wine)}
+@media(min-width:700px){.place-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><img class="appicon" src="icon.svg" alt=""><div><h1>Lima · Navidad y Año Nuevo</h1><p>Fabián + Fanny · 🇨🇴 🇵🇪 · 21 dic 2026 → 2 ene 2027</p></div></div></header>
+<div id="content">
+<section class="screen active" id="inicio"><div class="hero"><div class="eyebrow">Nuestro viaje a Lima</div><h2>Todo el viaje, a mano</h2><p>Horarios, lugares, reservas, teléfonos y accesos directos a Maps.</p><div class="hero-actions"><button class="primary" data-go="itinerario">🗓️ Ver itinerario</button><a class="secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jose+Antonio+Executive+Miraflores+Lima">🏨 Volver al hotel</a></div></div><h2 class="section-title">Reservas</h2><div class="reservation"><b>23 dic · 13:00</b><br>Isolina · Barranco</div><div class="reservation"><b>1 ene · 14:00</b><br>La Rosa Náutica · Miraflores</div></section>
+<section class="screen" id="itinerario"><h2 class="section-title" style="margin-top:2px">Itinerario</h2><div id="days"></div></section>
+<section class="screen" id="simple"><h2 class="section-title" style="margin-top:2px">Modo simple</h2><div class="simple-note"><h3>Solo lo esencial</h3><p>Hora y actividad principal, con texto más grande.</p></div><div id="simpleDays"></div></section>
+<section class="screen" id="lugares"><h2 class="section-title" style="margin-top:2px">Lugares</h2><div class="place-grid" id="places"></div></section>
+<section class="screen" id="info"><h2 class="section-title" style="margin-top:2px">Información útil</h2><div class="card"><h3>Vuelo de ida · LA4906</h3><p><b>21 de diciembre</b> · Bogotá → Lima</p><p>Salida 16:10 · estar en El Dorado 13:10.</p></div><div class="card"><h3>Vuelo de regreso · LA2386</h3><p><b>2 de enero</b> · Lima → Bogotá</p><p>Salida 13:00 · llegar al aeropuerto 10:00–10:45.</p></div><div class="card"><h3>José Antonio Executive</h3><p>Calle Colón 325, Miraflores, Lima</p><p><b>+51 1 445 5228</b></p><div class="actions"><a class="action primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jose+Antonio+Executive+Miraflores+Lima">📍 Mapa</a><a class="action" href="tel:+5114455228">📞 Llamar</a></div></div></section>
+</div>
+<nav><div class="nav-inner"><button class="navbtn active" data-target="inicio"><span class="ni">🏠</span>Inicio</button><button class="navbtn" data-target="itinerario"><span class="ni">🗓️</span>Itinerario</button><button class="navbtn" data-target="simple"><span class="ni">👓</span>Simple</button><button class="navbtn" data-target="lugares"><span class="ni">📍</span>Lugares</button><button class="navbtn" data-target="info"><span class="ni">ℹ️</span>Info</button></div></nav>
+<script>
+const D=[
+["21 dic","Llegada a Lima",[["12:00","🚗","Salida de casa hacia El Dorado"],["13:10","•","Llegada prevista al aeropuerto"],["16:10","✈️","Vuelo LA4906 Bogotá → Lima"],["Noche","🚗","Traslado al José Antonio Executive y check-in"],["Después","🍽️","Cena en Siete Sopas Miraflores"]]],
+["22 dic","Miraflores · LUM · Larcomar",[["08:00–09:30","•","Desayuno en el hotel"],["09:30–10:45","🚶","Parque Kennedy · Parque Central · Av. Larco"],["11:15–12:15","🏛️","Lugar de la Memoria (LUM)"],["12:45–14:00","🚶","Boulevard artesanal / Petit Thouars"],["14:00–15:15","🍽️","Almuerzo en Kauza Miraflores"],["16:30–17:00","🚶","Larcomar · Parque Salazar"],["17:15–18:45","🍽️","La Bonbonniere · café y atardecer"]]],
+["23 dic","Barranco",[["08:00–09:00","•","Desayuno en el hotel"],["10:00–11:10","🏛️","Museo Pedro de Osma"],["11:10–12:25","🚶","Av. Pedro de Osma · casonas · Paseo Sáenz Peña"],["13:00–14:30","🍽️","Isolina · reserva 13:00"],["14:45–15:45","🏛️","MAC Lima"],["16:30–17:00","🚶","Puente de los Suspiros · Bajada de Baños"],["17:00 en adelante","🚶","Costa de Barranco · paseo y descanso"]]],
+["24 dic","San Isidro · Navidad",[["08:00–09:00","•","Desayuno en el hotel"],["Mañana","🏛️","Huaca Huallamarca + San Isidro"],["13:30 aprox.","🍽️","Almuerzo en San Isidro"],["Tarde","🚶","El Olivar · caminata · café · descanso"],["Noche","🍽️","Cena de Navidad"]]],
+["25 dic","Pueblo Libre · Circuito Mágico",[["10:00–13:00","🏛️","Museo Larco"],["13:30–15:00","🍽️","Museo Larco Café-Restaurant"],["15:00–16:15","🚶","Plaza Bolívar · Pueblo Libre"],["18:00–20:30","💦","Circuito Mágico del Agua"]]],
+["26 dic","Pantanos de Villa · La Herradura",[["09:00–11:00","🌿","Pantanos de Villa"],["11:45–12:45","🚶","Miradores / tramo costero"],["13:30–15:00","🍽️","Almuerzo marino local en La Herradura"],["15:00–18:00","🌊","Playa La Herradura"]]],
+["27 dic","Callao · La Punta",[["09:30–11:00","🏰","Fortaleza del Real Felipe"],["11:00–13:00","🚶","Callao Monumental"],["Opcional","⛵","Paseo corto en lancha"],["14:00–15:30","🍽️","La Caleta de La Punta"],["15:30–18:00","🌊","La Punta · malecón · costa · posibilidad de playa"]]],
+["28 dic","Centro Histórico · Hakka",[["09:15–10:15","🚶","Plaza San Martín · Jirón de la Unión"],["10:15–11:15","🚶","Plaza Mayor · Catedral"],["11:45–12:15","🎖️","Cambio de guardia"],["12:15–12:45","📚","Casa de la Literatura"],["12:45–13:30","🏛️","San Francisco y Catacumbas"],["13:30–14:15","🍽️","Almuerzo ligero"],["14:15–16:30","🚶","Barrio Chino · Mercado Central"],["18:30–20:00","🍽️","Cena en Hakka"],["Después","🚶","Real Plaza Primavera o paseo por Miraflores"]]],
+["29 dic","Pachacámac",[["09:15–12:15","🏛️","Santuario Arqueológico + Museo de Sitio"],["13:00–14:30","🍽️","Almuerzo en el pueblo"],["14:30–15:15","🚶","Plaza de Armas · Santísimo Salvador · entorno"],["16:30–17:00","•","Llegada al hotel"],["Noche","☕","Descanso; café cercano si provoca"]]],
+["30 dic","MALI · Chung Tong",[["10:30–12:15","🖼️","MALI"],["12:15–13:15","🚶","Parque de la Exposición"],["13:15–14:00","🍽️","Almuerzo ligero"],["14:00–14:30","🚶","Paseo Colón"],["18:30–20:00","🍽️","Cena en Gran Chifa Chung Tong"],["Después","🚶","Paseo corto en Surco o Miraflores"]]],
+["31 dic","Miraflores · Año Nuevo",[["09:30 aprox.","🏛️","Huaca Pucllana"],["13:00–14:30","🍽️","Almuerzo en Huaca Pucllana Restaurant"],["14:30 en adelante","🚶","Malecón · café · descanso"],["Noche","🍽️","Cena de Año Nuevo"]]],
+["1 ene","Despedida de Lima",[["08:00–09:30","•","Desayuno tranquilo en el hotel"],["10:30–12:15","🚶","Paseo suave por Miraflores"],["14:00–16:00","🍽️","La Rosa Náutica · reserva 14:00"],["16:00–17:00","🚶","Parque del Amor · malecón"],["17:00–18:30","🚶","Larcomar · Parque Salazar · atardecer"]]],
+["2 ene","Regreso a Bogotá",[["08:30–09:00","🚗","Salida del hotel hacia el aeropuerto"],["10:00–10:45","•","Llegada prevista al aeropuerto"],["13:00","✈️","Vuelo LA2386 Lima → Bogotá"],["19:00 aprox.","🚗","Llegada prevista a casa"]]]
+];
+const P=[
+["José Antonio Executive","Hotel","Calle Colón 325, Miraflores, Lima","+51 1 445 5228","","Jose Antonio Executive Miraflores Lima"],
+["LUM","Museo","Bajada San Martín 151, Miraflores","+51 1 714 0102","","Lugar de la Memoria Miraflores Lima"],
+["Kauza Miraflores","Restaurante","Calle Tarata 248, Miraflores","+51 981 029 866","","Kauza Miraflores Lima"],
+["La Bonbonniere Larcomar","Café / restaurante","Larcomar, Miraflores","+51 946 468 553","+51946468553","La Bonbonniere Larcomar Lima"],
+["Museo Pedro de Osma","Museo","Av. Pedro de Osma 421, Barranco","","","Museo Pedro de Osma Lima"],
+["Isolina","Restaurante","Av. San Martín 101, Barranco","+51 943 833 031","+51943833031","Isolina Barranco Lima"],
+["MAC Lima","Museo","Av. Grau 1511, Barranco","","","MAC Lima Barranco"],
+["Huaca Huallamarca","Sitio arqueológico","Av. Nicolás de Ribera 201, San Isidro","","","Huaca Huallamarca Lima"],
+["Museo Larco","Museo","Av. Simón Bolívar 1515, Pueblo Libre","+51 1 461 1312","","Museo Larco Lima"],
+["Circuito Mágico del Agua","Atracción","Parque de la Reserva, Lima","","","Circuito Magico del Agua Lima"],
+["Pantanos de Villa","Naturaleza","Chorrillos, Lima","","","Pantanos de Villa Lima"],
+["Playa La Herradura","Playa","Chorrillos, Lima","","","Playa La Herradura Lima"],
+["Fortaleza del Real Felipe","Fortaleza","Plaza Independencia s/n, Callao","","","Fortaleza del Real Felipe Callao"],
+["La Caleta de La Punta","Restaurante","Malecón Pardo 180, La Punta","+51 999 560 333","","La Caleta de La Punta Callao"],
+["Casa de la Literatura","Centro cultural","Jr. Áncash 207, Lima","+51 983 098 984","","Casa de la Literatura Peruana Lima"],
+["Hakka","Chifa / cantonés","Av. Aviación 2877, San Borja","+51 940 220 660","","Restaurante Hakka San Borja Lima"],
+["Santuario de Pachacámac","Sitio arqueológico","Panamericana Sur km 31.5, Lurín","+51 1 321 5606","","Museo de Sitio Pachacamac Lima"],
+["MALI","Museo","Av. 9 de Diciembre 125, Lima","+51 969 046 254","","MALI Lima"],
+["Gran Chifa Chung Tong","Chifa","Av. Benavides 3590, Surco","+51 1 497 4326","","Gran Chifa Chung Tong Lima"],
+["Huaca Pucllana","Sitio arqueológico","General Borgoño cuadra 8, Miraflores","+51 1 617 7148","","Huaca Pucllana Lima"],
+["La Rosa Náutica","Restaurante","Espigón 4, Circuito de Playas, Miraflores","+51 1 445 0149","","La Rosa Nautica Lima"]
+];
+const map=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+document.getElementById("days").innerHTML=D.map((d,i)=>'<details class="day" '+(i===0?'open':'')+'><summary><div><strong>'+d[0]+'</strong><span>'+d[1]+'</span></div><b>⌄</b></summary><div class="events">'+d[2].map(e=>'<div class="event"><div class="time">'+e[0]+'</div><div class="event-icon">'+e[1]+'</div><div class="event-text">'+e[2]+'</div></div>').join("")+'</div></details>').join("");
+document.getElementById("simpleDays").innerHTML=D.map(d=>'<details class="simple-day"><summary><b>'+d[0]+'</b><span>'+d[1]+'</span></summary><div class="simple-list">'+d[2].map(e=>'<div class="simple-row"><b>'+e[0]+'</b><span>'+e[1]+' '+e[2]+'</span></div>').join("")+'</div></details>').join("");
+document.getElementById("places").innerHTML=P.map(p=>'<article class="place-card"><h3>'+p[0]+'</h3><p class="cat">'+p[1]+'</p><p>'+p[2]+'</p>'+(p[3]?'<p><b>'+p[3]+'</b></p>':'')+'<div class="actions"><a class="action primary" target="_blank" href="'+map(p[5])+'">📍 Mapa</a>'+(p[3]?'<a class="action" href="tel:'+p[3].replace(/[^+\d]/g,"")+'">📞 Llamar</a>':'')+(p[4]?'<a class="action whatsapp" target="_blank" href="https://wa.me/'+p[4].replace("+","")+'">💬 WhatsApp</a>':'')+'</div></article>').join("");
+function go(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.target===id));document.getElementById(id).scrollTop=0}
+document.querySelectorAll(".navbtn").forEach(b=>b.onclick=()=>go(b.dataset.target));document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+</script></body></html>
